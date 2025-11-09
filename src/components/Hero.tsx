@@ -22,6 +22,7 @@ function Hero() {
             src="../images/profile.jpg"
             alt="Profile"
             className="w-48 h-48 sm:w-56 sm:h-56 lg:w-64 lg:h-64 rounded-full mx-auto border-4 border-blue-500 shadow-2xl object-cover"
+            style={{ objectPosition: "center 10%" }}
           />
         </div>
         {/* Name */}

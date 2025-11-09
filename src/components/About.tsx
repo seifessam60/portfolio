@@ -86,7 +86,27 @@ function About() {
               Next.js on the frontend to Node.js and Go on the backend, I love
               building complete solutions.
             </p>
-
+            {/* Download Resume Button */}
+            <a
+              href="/Seif_Essam_Resume.pdf"
+              download="Seif_Essam_Resume.pdf"
+              className="inline-flex items-center gap-2 px-6 py-3 mb-8 bg-linear-to-r from-blue-500 to-purple-600 rounded-lg font-semibold hover:opacity-90 transition-opacity"
+            >
+              <svg
+                className="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                />
+              </svg>
+              Download Resume
+            </a>
             {/* Skills */}
             <h3 className="text-2xl font-semibold mb-4">
               Skills & Technologies

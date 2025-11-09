@@ -4,8 +4,10 @@ function Contact() {
       id="contact"
       className="min-h-screen flex items-center py-20 px-4 bg-gray-800"
     >
+
       <div className="max-w-4xl mx-auto w-full text-center">
         {/* Section Title */}
+
         <h2 className="text-4xl sm:text-5xl font-bold mb-6">Get In Touch</h2>
         <p className="text-xl text-gray-300 mb-12 max-w-2xl mx-auto">
           I'm currently available for freelance work and full-time
