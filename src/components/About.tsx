@@ -111,6 +111,7 @@ function About() {
             <h3 className="text-2xl font-semibold mb-4">
               Skills & Technologies
             </h3>
+            
             <div className="flex flex-wrap gap-3">
               {skills.map((skill, index) => (
                 <span

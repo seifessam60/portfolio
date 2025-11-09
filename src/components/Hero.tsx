@@ -1,4 +1,22 @@
+import { useEffect, useState } from "react";
+
 function Hero() {
+  const [typedText, setTypedText] = useState("");
+  const fullText = "Full-Stack Developer";
+
+  useEffect(() => {
+    let index = 0;
+    const timer = setInterval(() => {
+      if (index <= fullText.length) {
+        setTypedText(fullText.slice(0, index));
+        index++;
+      } else {
+        clearInterval(timer);
+      }
+    }, 100);
+
+    return () => clearInterval(timer);
+  }, []);
   return (
     <section
       id="home"
@@ -16,22 +34,28 @@ function Hero() {
 
       {/* Content */}
       <div className="relative z-10 max-w-4xl mx-auto text-center">
-        {/* Profile Image */}
+        {/* Profile Image with pulse animation */}
         <div className="mb-8">
-          <img
-            src="../images/profile.jpg"
-            alt="Profile"
-            className="w-48 h-48 sm:w-56 sm:h-56 lg:w-64 lg:h-64 rounded-full mx-auto border-4 border-blue-500 shadow-2xl object-cover"
-            style={{ objectPosition: "center 10%" }}
-          />
+          <div className="relative inline-block">
+            {/* Animated ring around profile */}
+            <div className="absolute inset-0 rounded-full border-4 border-blue-500 animate-ping opacity-20"></div>
+            <img
+              src="../images/profile.jpg"
+              alt="Profile"
+              className="relative w-48 h-48 sm:w-56 sm:h-56 lg:w-64 lg:h-64 rounded-full mx-auto border-4 border-blue-500 shadow-2xl object-cover"
+              style={{ objectPosition: "center 20%" }}
+            />
+          </div>
         </div>
-        {/* Name */}
-        <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-4 bg-linear-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+        {/* Name with slide-in animation */}
+        <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-4 bg-linear-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent animate-fade-in-down">
           Seif Essam
         </h1>
-        {/* Title */}
-        <h2 className="text-3xl sm:text-4xl font-semibold mb-6 text-white">
-          Full-Stack Developer
+
+        {/* Title with typing effect */}
+        <h2 className="text-3xl sm:text-4xl font-semibold mb-6 text-white h-12">
+          {typedText}
+          <span className="animate-blink">|</span>
         </h2>
         {/* Subtitle */}
         <p className="text-xl sm:text-2xl mb-8 text-gray-200 max-w-3xl mx-auto">
