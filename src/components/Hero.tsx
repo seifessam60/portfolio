@@ -8,9 +8,9 @@ function Hero() {
       <div className="absolute inset-0 z-0">
         {/* You can replace this URL with your own image */}
         <img
-          src="/images/software-bg.jpg"
+          src="/images/hero.jpg"
           alt="Background"
-          className="w-full h-full object-cover opacity-30"
+          className="w-full h-full object-cover opacity-10"
         />
       </div>
 
